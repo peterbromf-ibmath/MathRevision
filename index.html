@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math Revision — Choose your curriculum</title>
+<meta name="description" content="Exam-focused mathematics revision for IB, A Level and CBSE students — built by practising examiner and Director of Studies Pete Bromfield.">
+<link rel="canonical" href="https://mathrevision.co.uk/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta property="og:title" content="Math Revision — IB · A Level · CBSE">
+<meta property="og:description" content="Three curricula. One founder. Exam-focused mathematics revision built by a practising IB examiner and Director of Studies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mathrevision.co.uk/">
+<style>
+    * { box-sizing: border-box; }
+    :root {
+        --ink: #0b1a33;
+        --ink-soft: #35476a;
+        --muted: #6b7a99;
+        --line: #d6dfec;
+        --page: #f4f7fc;
+        --card: #ffffff;
+        --ib: #0d3d8f;
+        --alevel: #9a1b1b;
+        --cbse: #b25a00;
+        --accent: #f57f17;
+        --radius: 18px;
+    }
+    html, body { margin: 0; padding: 0; }
+    body {
+        font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(180deg, #eef3fb 0%, #f8fafd 55%, #ffffff 100%);
+        color: var(--ink);
+        line-height: 1.6;
+        min-height: 100vh;
+    }
+    a { color: var(--ib); }
+    header.topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 22px 24px 8px;
+    }
+    header.topbar .brand {
+        display: flex; align-items: center; gap: 12px;
+        font-weight: 800; color: var(--ink); font-size: 1.05rem; letter-spacing: -0.2px;
+    }
+    header.topbar .brand img { width: 34px; height: 34px; }
+    header.topbar .brand small { display: block; font-size: 0.7rem; color: var(--muted); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
+    header.topbar .mail {
+        color: var(--ib); text-decoration: none; font-weight: 700; font-size: 0.88rem;
+    }
+    header.topbar .mail:hover { text-decoration: underline; }
+
+    section.hero {
+        max-width: 1180px; margin: 0 auto; padding: 40px 24px 24px; text-align: center;
+    }
+    .eyebrow {
+        display: inline-block;
+        background: rgba(13,61,143,0.08); color: var(--ib);
+        padding: 6px 14px; border-radius: 999px;
+        font-weight: 800; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    h1 {
+        font-size: clamp(2rem, 4.6vw, 3.2rem);
+        line-height: 1.1;
+        margin: 0 0 16px;
+        color: var(--ink);
+        letter-spacing: -0.8px;
+    }
+    h1 em { font-style: normal; background: linear-gradient(120deg, var(--ib) 0%, #1a5fd0 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lede {
+        font-size: clamp(1rem, 1.4vw, 1.15rem);
+        color: var(--ink-soft);
+        max-width: 720px; margin: 0 auto;
+    }
+
+    section.doors {
+        max-width: 1180px; margin: 0 auto; padding: 40px 24px 20px;
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    }
+    .door {
+        position: relative;
+        display: flex; flex-direction: column;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 30px 28px 26px;
+        text-decoration: none;
+        color: var(--ink);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        overflow: hidden;
+        min-height: 340px;
+    }
+    .door::before {
+        content: "";
+        position: absolute; inset: 0 0 auto 0; height: 5px;
+        background: var(--ib);
+        transition: height 0.25s ease;
+    }
+    .door.alevel::before { background: var(--alevel); }
+    .door.cbse::before { background: var(--cbse); }
+    .door:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(11,26,51,0.12); border-color: transparent; }
+    .door:hover::before { height: 9px; }
+
+    .door .logo-wrap {
+        width: 76px; height: 76px;
+        border-radius: 16px;
+        display: flex; align-items: center; justify-content: center;
+        background: rgba(13,61,143,0.08);
+        color: var(--ib);
+        margin-bottom: 20px;
+    }
+    .door.alevel .logo-wrap { background: rgba(154,27,27,0.09); color: var(--alevel); }
+    .door.cbse   .logo-wrap { background: rgba(178,90,0,0.10); color: var(--cbse); }
+    .door .logo-wrap svg { width: 42px; height: 42px; }
+
+    .door h2 {
+        margin: 0 0 6px;
+        font-size: 1.35rem;
+        color: var(--ink);
+        letter-spacing: -0.3px;
+    }
+    .door .domain {
+        font-size: 0.82rem; color: var(--muted); font-weight: 600; letter-spacing: 0.3px; margin: 0 0 14px;
+    }
+    .door p.copy {
+        margin: 0 0 20px; color: var(--ink-soft); font-size: 0.95rem;
+    }
+    .door .foot {
+        margin-top: auto;
+        display: inline-flex; align-items: center; gap: 8px;
+        font-weight: 800; font-size: 0.95rem; color: var(--ib);
+    }
+    .door.alevel .foot { color: var(--alevel); }
+    .door.cbse   .foot { color: var(--cbse); }
+    .door .foot .arrow { transition: transform 0.2s ease; }
+    .door:hover .foot .arrow { transform: translateX(4px); }
+
+    .door .pill-status {
+        position: absolute; top: 22px; right: 22px;
+        font-size: 0.68rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+        padding: 5px 10px; border-radius: 999px;
+    }
+    .door.live .pill-status  { background: #dff5e6; color: #146c2e; }
+    .door.soon .pill-status  { background: #fff2d6; color: #7a4e00; }
+
+    /* Founder section */
+    section.founder-wrap {
+        background: #ffffff;
+        border-top: 1px solid var(--line);
+        margin-top: 40px;
+        padding: 64px 24px 48px;
+    }
+    .founder {
+        max-width: 980px; margin: 0 auto;
+        display: grid; grid-template-columns: 240px 1fr; gap: 44px; align-items: start;
+    }
+    .founder img.photo {
+        width: 100%; border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(11,26,51,0.15);
+    }
+    .founder .title-tag {
+        display: inline-block; background: rgba(13,61,143,0.10); color: var(--ib);
+        padding: 5px 12px; border-radius: 999px; font-size: 0.72rem; font-weight: 800;
+        letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .founder h2 {
+        margin: 0 0 4px; font-size: 2rem; color: var(--ink); letter-spacing: -0.4px;
+    }
+    .founder .role-line {
+        color: var(--ink-soft); font-size: 0.98rem; margin: 0 0 18px;
+    }
+    .founder .role-line strong { color: var(--ink); }
+    .founder p { color: var(--ink-soft); margin: 0 0 14px; font-size: 0.98rem; }
+    .founder .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .founder .pill {
+        background: #eef3fb; color: var(--ib); padding: 5px 12px; border-radius: 999px;
+        font-size: 0.78rem; font-weight: 700;
+    }
+    .founder .cbse-callout {
+        border-left: 4px solid var(--cbse);
+        background: #fff8ee;
+        padding: 14px 18px;
+        border-radius: 0 10px 10px 0;
+        margin: 18px 0 8px;
+        color: var(--ink);
+        font-size: 0.96rem;
+    }
+    .founder .cbse-callout strong { color: var(--cbse); }
+
+    footer.site-foot {
+        text-align: center;
+        padding: 28px 24px 40px;
+        color: var(--muted);
+        font-size: 0.85rem;
+    }
+    footer.site-foot a { color: var(--ib); text-decoration: none; font-weight: 600; }
+    footer.site-foot a:hover { text-decoration: underline; }
+
+    /* Modal */
+    .modal-backdrop {
+        position: fixed; inset: 0;
+        background: rgba(11,26,51,0.55);
+        display: none;
+        align-items: center; justify-content: center;
+        padding: 20px;
+        z-index: 1000;
+        backdrop-filter: blur(4px);
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+        background: #fff;
+        border-radius: 20px;
+        max-width: 460px; width: 100%;
+        padding: 34px 32px 28px;
+        text-align: center;
+        box-shadow: 0 30px 80px rgba(11,26,51,0.35);
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .modal-backdrop.open .modal { transform: translateY(0); opacity: 1; }
+    .modal .icon {
+        width: 68px; height: 68px;
+        border-radius: 18px;
+        margin: 0 auto 16px;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .modal.alevel .icon { background: rgba(154,27,27,0.10); color: var(--alevel); }
+    .modal.cbse   .icon { background: rgba(178,90,0,0.10); color: var(--cbse); }
+    .modal .icon svg { width: 36px; height: 36px; }
+    .modal h3 { margin: 0 0 8px; font-size: 1.5rem; color: var(--ink); letter-spacing: -0.3px; }
+    .modal p { margin: 0 0 22px; color: var(--ink-soft); font-size: 0.98rem; }
+    .modal .btn {
+        display: inline-block;
+        background: var(--ink);
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 26px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        border: none;
+        cursor: pointer;
+    }
+    .modal .btn:hover { background: #182b52; }
+    .modal .btn-secondary {
+        background: transparent; color: var(--muted);
+        font-size: 0.85rem; margin-left: 6px; padding: 12px 10px;
+    }
+    .modal .btn-secondary:hover { color: var(--ink); background: transparent; }
+    .modal .notify-form {
+        display: flex; gap: 8px; margin-bottom: 12px;
+    }
+    .modal .notify-form input {
+        flex: 1;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        font-size: 0.95rem;
+        font-family: inherit;
+        outline: none;
+    }
+    .modal .notify-form input:focus { border-color: var(--ib); }
+
+    @media (max-width: 860px) {
+        section.doors { grid-template-columns: 1fr; gap: 16px; }
+        .door { min-height: auto; }
+        .founder { grid-template-columns: 1fr; gap: 28px; }
+        .founder img.photo { max-width: 200px; }
+        header.topbar .brand small { display: none; }
+    }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+    <a href="/" class="brand" data-testid="brand-home">
+        <img src="/logo.png" alt="Math Revision">
+        <div>
+            Math Revision
+            <small>mathrevision.co.uk</small>
+        </div>
+    </a>
+    <a href="mailto:pbromfield@ibmathrevision.com" class="mail" data-testid="header-mail">pbromfield@ibmathrevision.com</a>
+</header>
+
+<section class="hero">
+    <span class="eyebrow">Choose your curriculum</span>
+    <h1>Exam-focused maths revision, built by an <em>experienced examiner</em>.</h1>
+    <p class="lede">Three curricula. One founder. Pick your door below — every question, mark scheme and worked answer on our sites is written or reviewed personally by Pete Bromfield.</p>
+</section>
+
+<section class="doors" aria-label="Curriculum sites">
+
+    <!-- Door 1: IB (LIVE) -->
+    <a href="https://ibmathrevision.com" class="door live" target="_self" rel="noopener" data-testid="door-ib">
+        <span class="pill-status">Live</span>
+        <div class="logo-wrap" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="24" r="19"></circle>
+                <path d="M6 24h36"></path>
+                <path d="M24 6c5 5.5 7.5 11.5 7.5 18S29 39 24 42"></path>
+                <path d="M24 6c-5 5.5-7.5 11.5-7.5 18S19 39 24 42"></path>
+            </svg>
+        </div>
+        <h2>IB Math Revision</h2>
+        <p class="domain">ibmathrevision.com</p>
+        <p class="copy">SL AI · SL AA · HL AI · HL AA. AI-graded practice, Path-to-7 coach, printable workbooks, IA support and examiner review.</p>
+        <span class="foot">Enter site <span class="arrow">→</span></span>
+    </a>
+
+    <!-- Door 2: A Level -->
+    <a href="#" class="door alevel soon" data-testid="door-alevel" data-modal="alevel">
+        <span class="pill-status">Coming soon</span>
+        <div class="logo-wrap" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 40 L24 8 L40 40"></path>
+                <path d="M15 28 L33 28"></path>
+                <path d="M6 40 L42 40"></path>
+            </svg>
+        </div>
+        <h2>A Level Math Revision</h2>
+        <p class="domain">alevelmathrevision.com</p>
+        <p class="copy">Pure, Statistics &amp; Mechanics for AQA, Edexcel and OCR. Exam-style practice with method-mark feedback — currently in build.</p>
+        <span class="foot">Get notified <span class="arrow">→</span></span>
+    </a>
+
+    <!-- Door 3: CBSE -->
+    <a href="#" class="door cbse soon" data-testid="door-cbse" data-modal="cbse">
+        <span class="pill-status">Coming soon</span>
+        <div class="logo-wrap" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 18 L24 8 L44 18 L24 28 Z"></path>
+                <path d="M12 22 V33 C12 35 17 39 24 39 C31 39 36 35 36 33 V22"></path>
+                <path d="M44 18 V30"></path>
+            </svg>
+        </div>
+        <h2>CBSE Math Revision</h2>
+        <p class="domain">Domain launching soon</p>
+        <p class="copy">Class IX–XII CBSE mathematics. Board-style questions, chapter-by-chapter practice and Boards-day exam technique.</p>
+        <span class="foot">Get notified <span class="arrow">→</span></span>
+    </a>
+
+</section>
+
+<section class="founder-wrap">
+    <div class="founder">
+        <img src="/img/pete-bromfield.jpg" alt="Pete Bromfield" class="photo" loading="lazy" data-testid="founder-photo" onerror="this.style.display='none'">
+        <div>
+            <span class="title-tag">Founder &amp; Lead Teacher</span>
+            <h2>Pete Bromfield</h2>
+            <p class="role-line"><strong>Director of Studies &amp; Enrichment</strong> at an IB Continuum School in Europe · Former Head of Maths · Former Head of Sixth Form (two schools) · Former IB Diploma Programme Coordinator · Practising <strong>IB Internal Assessment examiner</strong> and <strong>Paper examiner</strong> — over a decade of leadership across the IB continuum.</p>
+
+            <p>Pete is an experienced IB Diploma Programme mathematics teacher who has coached students across every DP maths course — SL AI, SL AA, HL AI and HL AA — through their final exams. His approach blends rigorous exam preparation with the personalised diagnostic work students need to move from a 5 to a 7.</p>
+
+            <p>Alongside classroom teaching, Pete provides one-to-one Internal Assessment support and hosts the online learning engines you'll find on this site. Every practice question, mark scheme and worked answer is written by him or reviewed line-by-line before it reaches you.</p>
+
+            <div class="cbse-callout" data-testid="cbse-experience">
+                <strong>CBSE experience:</strong> Pete has served on a <strong>Council of International Schools (CIS)</strong> inspection team at a CBSE / A Level school, giving him first-hand insight into the CBSE mathematics curriculum, assessment demands and how it maps onto international programmes.
+            </div>
+
+            <div class="pills">
+                <span class="pill">IB SL AI</span>
+                <span class="pill">IB SL AA</span>
+                <span class="pill">IB HL AI</span>
+                <span class="pill">IB HL AA</span>
+                <span class="pill">IA marking</span>
+                <span class="pill">A Level (in build)</span>
+                <span class="pill">CBSE inspector experience</span>
+                <span class="pill">Curriculum leadership</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-foot">
+    &copy; 2026 Math Revision · <a href="mailto:pbromfield@ibmathrevision.com">pbromfield@ibmathrevision.com</a> · <a href="https://wa.me/447824896623">WhatsApp</a>
+    <div style="margin-top:10px;font-size:0.72rem;opacity:0.8;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.4;">
+        Independent revision site. Not affiliated with, endorsed by or authorised by the IBO, any UK exam board, or CBSE. Trademarks belong to their respective owners.
+    </div>
+</footer>
+
+<!-- Coming-soon modals -->
+<div class="modal-backdrop" id="modal-alevel" role="dialog" aria-modal="true" aria-labelledby="modal-alevel-title" data-testid="modal-alevel">
+    <div class="modal alevel">
+        <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 40 L24 8 L40 40"></path>
+                <path d="M15 28 L33 28"></path>
+            </svg>
+        </div>
+        <h3 id="modal-alevel-title">A Level Math Revision — coming soon</h3>
+        <p><strong>alevelmathrevision.com</strong> is in build. Pure, Statistics &amp; Mechanics for AQA, Edexcel and OCR — with the same exam-focused, method-mark grading you'll find on the IB site.</p>
+        <form class="notify-form" data-notify="alevel" novalidate>
+            <input type="email" placeholder="Your email" required data-testid="notify-alevel-email" aria-label="Email address">
+            <button type="submit" class="btn" data-testid="notify-alevel-submit">Notify me</button>
+        </form>
+        <button type="button" class="btn btn-secondary" data-close data-testid="close-alevel">Close</button>
+    </div>
+</div>
+
+<div class="modal-backdrop" id="modal-cbse" role="dialog" aria-modal="true" aria-labelledby="modal-cbse-title" data-testid="modal-cbse">
+    <div class="modal cbse">
+        <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 18 L24 8 L44 18 L24 28 Z"></path>
+                <path d="M12 22 V33 C12 35 17 39 24 39 C31 39 36 35 36 33 V22"></path>
+            </svg>
+        </div>
+        <h3 id="modal-cbse-title">CBSE Math Revision — coming soon</h3>
+        <p>The CBSE site is next on the roadmap — Class IX to XII, board-style questions, chapter walkthroughs and Boards-day technique. Leave your email and we'll ping you the moment it opens.</p>
+        <form class="notify-form" data-notify="cbse" novalidate>
+            <input type="email" placeholder="Your email" required data-testid="notify-cbse-email" aria-label="Email address">
+            <button type="submit" class="btn" data-testid="notify-cbse-submit">Notify me</button>
+        </form>
+        <button type="button" class="btn btn-secondary" data-close data-testid="close-cbse">Close</button>
+    </div>
+</div>
+
+<script>
+(function(){
+    const openModal = (id) => {
+        const el = document.getElementById('modal-' + id);
+        if (!el) return;
+        el.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => { const i = el.querySelector('input'); if (i) i.focus(); }, 60);
+    };
+    const closeModal = (el) => {
+        el.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+
+    document.querySelectorAll('[data-modal]').forEach(a => {
+        a.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(a.getAttribute('data-modal'));
+        });
+    });
+
+    document.querySelectorAll('.modal-backdrop').forEach(bd => {
+        bd.addEventListener('click', (e) => {
+            if (e.target === bd || e.target.hasAttribute('data-close')) closeModal(bd);
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-backdrop.open').forEach(closeModal);
+        }
+    });
+
+    // Notify form — client-side capture using mailto fallback
+    document.querySelectorAll('form[data-notify]').forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const kind = form.getAttribute('data-notify');
+            const input = form.querySelector('input[type=email]');
+            const email = (input && input.value || '').trim();
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                input.style.borderColor = '#c0392b';
+                input.focus();
+                return;
+            }
+            const subject = encodeURIComponent(`Notify me — ${kind === 'alevel' ? 'A Level' : 'CBSE'} Math Revision launch`);
+            const body = encodeURIComponent(`Please add me to the launch list for ${kind === 'alevel' ? 'alevelmathrevision.com' : 'CBSE Math Revision'}.\n\nEmail: ${email}`);
+            window.location.href = `mailto:pbromfield@ibmathrevision.com?subject=${subject}&body=${body}`;
+            const btn = form.querySelector('button');
+            if (btn) { btn.textContent = 'Opening email…'; btn.disabled = true; }
+        });
+    });
+})();
+</script>
+
+</body>
+</html>
