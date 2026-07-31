@@ -278,6 +278,60 @@
 </head>
 <body>
 
+<!-- 🏆 This week's champion — auto-hides when no champion posted this week. -->
+<div id="mrc-hero" data-testid="mrc-hero" hidden aria-live="polite">
+  <a class="mrc-hero-inner" id="mrc-hero-link" href="https://ibmathrevision.com/live-game.html" target="_blank" rel="noopener">
+    <img class="mrc-hero-img" id="mrc-hero-img" alt="This week's Maths champion celebration card" loading="eager" decoding="async">
+    <div class="mrc-hero-copy">
+      <span class="mrc-hero-eyebrow">// This week's champion</span>
+      <h2 class="mrc-hero-title" id="mrc-hero-title">🏆 —</h2>
+      <p class="mrc-hero-meta" id="mrc-hero-meta">—</p>
+      <span class="mrc-hero-cta">Compete this week →</span>
+    </div>
+  </a>
+</div>
+<style>
+  #mrc-hero { max-width: 1080px; margin: 24px auto; padding: 0 20px; font-family: 'Merriweather', Georgia, serif; }
+  .mrc-hero-inner { display: grid; grid-template-columns: 260px 1fr; gap: 26px; align-items: center; padding: 18px 22px; background: linear-gradient(135deg, #05123a 0%, #0d1f56 100%); border: 1px solid #223049; border-radius: 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22); text-decoration: none; color: #f6f0dd; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .mrc-hero-inner:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0, 0, 0, 0.30); }
+  .mrc-hero-img { width: 100%; aspect-ratio: 1 / 1; border-radius: 10px; display: block; background: #0a1730; object-fit: cover; }
+  .mrc-hero-eyebrow { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.72rem; color: #5cd6ff; letter-spacing: 1.6px; text-transform: uppercase; }
+  .mrc-hero-title { margin: 6px 0 4px; font-size: 1.6rem; line-height: 1.2; color: #f4b93a; font-weight: 700; }
+  .mrc-hero-meta { margin: 0 0 12px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.85rem; color: #c9d4ea; }
+  .mrc-hero-cta { display: inline-block; padding: 8px 16px; background: #a3f57b; color: #05123a; border-radius: 999px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.78rem; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 700; }
+  @media (max-width: 680px) { .mrc-hero-inner { grid-template-columns: 1fr; padding: 16px; } .mrc-hero-img { max-width: 220px; margin: 0 auto; } .mrc-hero-title { text-align: center; } .mrc-hero-meta { text-align: center; } .mrc-hero-cta { display: block; text-align: center; } }
+</style>
+<script>
+(function () {
+  'use strict';
+  var MANIFEST_URL = 'https://storage.googleapis.com/ibmathrevision-2b521.firebasestorage.app/paper3-champions/current.json';
+  async function paint() {
+    try {
+      var res = await fetch(MANIFEST_URL + '?_=' + Math.floor(Date.now() / 3600000));
+      if (!res.ok) return;
+      var m = await res.json();
+      if (!m || !m.photoUrl || !m.initials) return;
+      var host = document.getElementById('mrc-hero');
+      var img = document.getElementById('mrc-hero-img');
+      var title = document.getElementById('mrc-hero-title');
+      var meta = document.getElementById('mrc-hero-meta');
+      if (!host) return;
+      img.src = m.photoUrl;
+      img.alt = 'Weekly champion ' + m.initials + ' — ' + m.pct + '%';
+      title.textContent = '🏆 ' + m.initials + ' · ' + m.pct + '%';
+      var parts = [];
+      if (m.correct != null && m.total != null) parts.push(m.correct + ' / ' + m.total + ' marks');
+      if (m.durationLabel) parts.push('solved in ' + m.durationLabel);
+      if (m.weekStamp) parts.push(m.weekStamp);
+      meta.textContent = parts.join(' · ');
+      host.hidden = false;
+    } catch (_) { }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paint);
+  else paint();
+})();
+</script>
+
 <header class="topbar">
     <a href="/" class="brand" data-testid="brand-home">
         <img src="/logo.png" alt="Math Revision">
