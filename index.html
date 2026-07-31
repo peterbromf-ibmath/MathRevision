@@ -332,6 +332,60 @@
 })();
 </script>
 
+<!-- 🏆 A Level champion strip — red/teal branded, hides when no manifest. -->
+<div id="mrca-hero" data-testid="mrca-hero" hidden aria-live="polite">
+  <a class="mrca-hero-inner" id="mrca-hero-link" href="https://alevelmathrevision.com/linear.html" target="_blank" rel="noopener">
+    <img class="mrca-hero-img" id="mrca-hero-img" alt="This week's A Level Maths champion" loading="lazy" decoding="async">
+    <div class="mrca-hero-copy">
+      <span class="mrca-hero-eyebrow">// This week's A Level champion</span>
+      <h2 class="mrca-hero-title" id="mrca-hero-title">🏆 —</h2>
+      <p class="mrca-hero-meta" id="mrca-hero-meta">—</p>
+      <span class="mrca-hero-cta">Beat this score →</span>
+    </div>
+  </a>
+</div>
+<style>
+  #mrca-hero { max-width: 1080px; margin: 24px auto; padding: 0 20px; font-family: 'Merriweather', Georgia, serif; }
+  .mrca-hero-inner { display: grid; grid-template-columns: 260px 1fr; gap: 26px; align-items: center; padding: 18px 22px; background: linear-gradient(135deg, #9a1b1b 0%, #0e7c86 100%); border: 1px solid #6a1010; border-radius: 14px; box-shadow: 0 8px 24px rgba(154,27,27,0.25); text-decoration: none; color: #fff; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .mrca-hero-inner:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(154,27,27,0.35); }
+  .mrca-hero-img { width: 100%; aspect-ratio: 1 / 1; border-radius: 10px; display: block; background: #7c1414; object-fit: cover; }
+  .mrca-hero-eyebrow { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.72rem; color: #ffd6a5; letter-spacing: 1.6px; text-transform: uppercase; }
+  .mrca-hero-title { margin: 6px 0 4px; font-size: 1.6rem; line-height: 1.2; color: #fff2d6; font-weight: 700; }
+  .mrca-hero-meta { margin: 0 0 12px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.85rem; color: #ffe4c4; }
+  .mrca-hero-cta { display: inline-block; padding: 8px 16px; background: #fff2d6; color: #9a1b1b; border-radius: 999px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.78rem; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 700; }
+  @media (max-width: 680px) { .mrca-hero-inner { grid-template-columns: 1fr; padding: 16px; } .mrca-hero-img { max-width: 220px; margin: 0 auto; } .mrca-hero-title { text-align: center; } .mrca-hero-meta { text-align: center; } .mrca-hero-cta { display: block; text-align: center; } }
+</style>
+<script>
+(function () {
+  'use strict';
+  var MANIFEST_URL = 'https://storage.googleapis.com/ibmathrevision-2b521.firebasestorage.app/paper3-champions/current-alevel.json';
+  async function paint() {
+    try {
+      var res = await fetch(MANIFEST_URL + '?_=' + Math.floor(Date.now() / 3600000));
+      if (!res.ok) return;
+      var m = await res.json();
+      if (!m || !m.photoUrl || !m.initials) return;
+      var host = document.getElementById('mrca-hero');
+      var img = document.getElementById('mrca-hero-img');
+      var title = document.getElementById('mrca-hero-title');
+      var meta = document.getElementById('mrca-hero-meta');
+      if (!host) return;
+      img.src = m.photoUrl;
+      img.alt = 'A Level champion ' + m.initials + ' — ' + m.pct + '%';
+      title.textContent = '🏆 ' + m.initials + ' · ' + m.pct + '%';
+      var parts = [];
+      if (m.correct != null && m.total != null) parts.push(m.correct + ' / ' + m.total + ' marks');
+      if (m.durationLabel) parts.push('solved in ' + m.durationLabel);
+      if (m.weekStamp) parts.push(m.weekStamp);
+      meta.textContent = parts.join(' · ');
+      host.hidden = false;
+    } catch (_) { }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paint);
+  else paint();
+})();
+</script>
+
 <header class="topbar">
     <a href="/" class="brand" data-testid="brand-home">
         <img src="/logo.png" alt="Math Revision">
