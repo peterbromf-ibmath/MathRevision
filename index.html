@@ -456,6 +456,54 @@
 
 </section>
 
+<section class="teasers" aria-label="Live site previews" data-testid="teasers-section">
+    <div class="teasers-wrap">
+        <h2 class="teasers-h">A peek at the real thing</h2>
+        <p class="teasers-lede">Live screenshots — not mockups. Click any preview to open the full site.</p>
+        <div class="teasers-grid">
+            <a class="teaser-card" href="https://ibmathrevision.com" target="_blank" rel="noopener" data-testid="teaser-ib">
+                <div class="teaser-img-wrap">
+                    <img src="/img/teaser-ib.jpg" alt="Screenshot of ibmathrevision.com hero: 'The complete IB Maths learning engine' with student/staff/parent doors" loading="lazy" decoding="async">
+                    <span class="teaser-badge live">Live</span>
+                </div>
+                <div class="teaser-caption">
+                    <strong>ibmathrevision.com</strong>
+                    <span>SL AA · SL AI · HL AA · HL AI — AI grading, Path-to-7 coach, Personal Best dashboard, teacher heatmaps.</span>
+                </div>
+            </a>
+
+            <a class="teaser-card" href="https://alevelmathrevision.com" target="_blank" rel="noopener" data-testid="teaser-alevel">
+                <div class="teaser-img-wrap">
+                    <img src="/img/teaser-alevel.jpg" alt="Screenshot of alevelmathrevision.com hero: 'The revision engine built for Edexcel IAL Maths' with launch panel" loading="lazy" decoding="async">
+                    <span class="teaser-badge live">Live</span>
+                </div>
+                <div class="teaser-caption">
+                    <strong>alevelmathrevision.com</strong>
+                    <span>Linear (UK) &amp; International Modular · Edexcel IAL · Cambridge CIE 9709 — same content engine as the IB site.</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    section.teasers { background: #fbfcfe; border-top: 1px solid #e4ecf5; padding: 56px 20px 40px; }
+    .teasers-wrap { max-width: 1080px; margin: 0 auto; text-align: center; }
+    .teasers-h { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0 0 6px; letter-spacing: -0.4px; color: #0b1a33; }
+    .teasers-lede { color: #6b7a99; margin: 0 0 28px; font-size: 0.98rem; }
+    .teasers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; text-align: left; }
+    .teaser-card { display: flex; flex-direction: column; background: #fff; border: 1px solid #d6dfec; border-radius: 14px; overflow: hidden; text-decoration: none; color: #0b1a33; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+    .teaser-card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(11,26,51,0.15); border-color: transparent; text-decoration: none; }
+    .teaser-img-wrap { position: relative; aspect-ratio: 1400 / 900; overflow: hidden; background: #eef3fb; }
+    .teaser-img-wrap img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top center; transition: transform 0.4s ease; }
+    .teaser-card:hover .teaser-img-wrap img { transform: scale(1.02); }
+    .teaser-badge { position: absolute; top: 12px; right: 12px; padding: 4px 10px; border-radius: 999px; font-size: 0.66rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; background: #d1fae5; color: #146c2e; }
+    .teaser-caption { padding: 16px 20px 20px; }
+    .teaser-caption strong { display: block; font-size: 1.05rem; margin-bottom: 4px; color: #0b1a33; }
+    .teaser-caption span { color: #35476a; font-size: 0.9rem; }
+    @media (max-width: 780px) { .teasers-grid { grid-template-columns: 1fr; } section.teasers { padding: 44px 16px 32px; } }
+</style>
+
 <section class="founder-wrap">
     <div class="founder">
         <img src="/img/pete-bromfield.jpg" alt="Pete Bromfield" class="photo" loading="lazy" data-testid="founder-photo" onerror="this.style.display='none'">
