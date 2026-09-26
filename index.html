@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Math Revision — Choose your curriculum</title>
-<meta name="description" content="Exam-focused mathematics revision for IB, A Level and CBSE students — built by practising examiner and Director of Studies Pete Bromfield.">
+<meta name="description" content="Exam-focused mathematics revision for IB, A Level, IGCSE and CBSE students — built by practising examiner and Director of Studies Pete Bromfield.">
 <link rel="canonical" href="https://mathrevision.co.uk/">
 <link rel="icon" type="image/png" href="/favicon.png">
-<meta property="og:title" content="Math Revision — IB · A Level · CBSE">
-<meta property="og:description" content="Three curricula. One founder. Exam-focused mathematics revision built by a practising IB examiner and Director of Studies.">
+<meta property="og:title" content="Math Revision — IB · A Level · IGCSE · CBSE">
+<meta property="og:description" content="Four curricula. One founder. Exam-focused mathematics revision built by a practising IB examiner and Director of Studies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mathrevision.co.uk/">
 <style>
@@ -22,6 +22,7 @@
         --card: #ffffff;
         --ib: #0d3d8f;
         --alevel: #9a1b1b;
+        --igcse: #047857;
         --cbse: #b25a00;
         --accent: #f57f17;
         --radius: 18px;
@@ -80,7 +81,12 @@
 
     section.doors {
         max-width: 1180px; margin: 0 auto; padding: 40px 24px 20px;
-        display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px;
+    }
+    @media (min-width: 1100px) {
+        section.doors { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .door { padding: 28px 22px 24px; }
+        .door h2 { font-size: 1.22rem; }
     }
     .door {
         position: relative;
@@ -102,6 +108,7 @@
         transition: height 0.25s ease;
     }
     .door.alevel::before { background: var(--alevel); }
+    .door.igcse::before { background: var(--igcse); }
     .door.cbse::before { background: var(--cbse); }
     .door:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(11,26,51,0.12); border-color: transparent; }
     .door:hover::before { height: 9px; }
@@ -115,6 +122,7 @@
         margin-bottom: 20px;
     }
     .door.alevel .logo-wrap { background: rgba(154,27,27,0.09); color: var(--alevel); }
+    .door.igcse  .logo-wrap { background: rgba(4,120,87,0.10); color: var(--igcse); }
     .door.cbse   .logo-wrap { background: rgba(178,90,0,0.10); color: var(--cbse); }
     .door .logo-wrap svg { width: 42px; height: 42px; }
 
@@ -123,6 +131,7 @@
         font-size: 1.35rem;
         color: var(--ink);
         letter-spacing: -0.3px;
+        line-height: 1.25;
     }
     .door .domain {
         font-size: 0.82rem; color: var(--muted); font-weight: 600; letter-spacing: 0.3px; margin: 0 0 14px;
@@ -136,6 +145,7 @@
         font-weight: 800; font-size: 0.95rem; color: var(--ib);
     }
     .door.alevel .foot { color: var(--alevel); }
+    .door.igcse  .foot { color: var(--igcse); }
     .door.cbse   .foot { color: var(--cbse); }
     .door .foot .arrow { transition: transform 0.2s ease; }
     .door:hover .foot .arrow { transform: translateX(4px); }
@@ -231,6 +241,7 @@
         display: flex; align-items: center; justify-content: center;
     }
     .modal.alevel .icon { background: rgba(154,27,27,0.10); color: var(--alevel); }
+    .modal.igcse  .icon { background: rgba(4,120,87,0.10); color: var(--igcse); }
     .modal.cbse   .icon { background: rgba(178,90,0,0.10); color: var(--cbse); }
     .modal .icon svg { width: 36px; height: 36px; }
     .modal h3 { margin: 0 0 8px; font-size: 1.5rem; color: var(--ink); letter-spacing: -0.3px; }
@@ -266,9 +277,17 @@
         outline: none;
     }
     .modal .notify-form input:focus { border-color: var(--ib); }
+    .modal .notify-form input { min-width: 0; }
+    .modal .notify-form .btn { white-space: nowrap; }
+    @media (max-width: 420px) {
+        .modal { padding: 28px 20px 22px; }
+        .modal .notify-form { flex-direction: column; }
+    }
 
-    @media (max-width: 860px) {
+    @media (max-width: 640px) {
         section.doors { grid-template-columns: 1fr; gap: 16px; }
+    }
+    @media (max-width: 860px) {
         .door { min-height: auto; }
         .founder { grid-template-columns: 1fr; gap: 28px; }
         .founder img.photo { max-width: 200px; }
@@ -400,7 +419,7 @@
 <section class="hero">
     <span class="eyebrow">Choose your curriculum</span>
     <h1>Exam-focused maths revision, built by an <em>experienced examiner</em>.</h1>
-    <p class="lede">Three curricula. One founder. Pick your door below — every question, mark scheme and worked answer on our sites is written or reviewed personally by Pete Bromfield.</p>
+    <p class="lede">Four curricula. One founder. Pick your door below — every question, mark scheme and worked answer on our sites is written or reviewed personally by Pete Bromfield.</p>
 </section>
 
 <section class="doors" aria-label="Curriculum sites">
@@ -438,7 +457,24 @@
         <span class="foot">Enter site <span class="arrow">→</span></span>
     </a>
 
-    <!-- Door 3: CBSE -->
+    <!-- Door 3: IGCSE -->
+    <a href="#" class="door igcse soon" data-testid="door-igcse" data-modal="igcse">
+        <span class="pill-status">Coming soon</span>
+        <div class="logo-wrap" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="7" y="5" width="34" height="38" rx="4"></rect>
+                    <path d="M14 14h20"></path>
+                    <path d="M17 24h14M24 17v14"></path>
+                    <path d="M15 37h18"></path>
+                </svg>
+        </div>
+        <h2>IGCSE Math Revision</h2>
+        <p class="domain">igcsemathrevision.com</p>
+        <p class="copy">Edexcel International GCSE (4MA1) Higher. Topic-by-topic practice, Path to 9, formula guide and examiner-style mark schemes.</p>
+        <span class="foot">Get notified <span class="arrow">→</span></span>
+    </a>
+
+    <!-- Door 4: CBSE -->
     <a href="#" class="door cbse soon" data-testid="door-cbse" data-modal="cbse">
         <span class="pill-status">Coming soon</span>
         <div class="logo-wrap" aria-hidden="true">
@@ -450,7 +486,7 @@
         </div>
         <h2>CBSE Math Revision</h2>
         <p class="domain">Domain launching soon</p>
-        <p class="copy">Class IX–XII CBSE mathematics. Board-style questions, chapter-by-chapter practice and Boards-day exam technique.</p>
+        <p class="copy">CBSE mathematics — Class X and XII first, then IX and XI. Board-style questions, chapter-by-chapter practice and Boards-day exam technique.</p>
         <span class="foot">Get notified <span class="arrow">→</span></span>
     </a>
 
@@ -460,7 +496,7 @@
     <div class="teasers-wrap">
         <h2 class="teasers-h">A peek at the real thing</h2>
         <p class="teasers-lede">Live screenshots — not mockups. Click any preview to open the full site.</p>
-        <div class="teasers-grid">
+        <div class="teasers-grid sites-grid">
             <a class="teaser-card" href="https://ibmathrevision.com" target="_blank" rel="noopener" data-testid="teaser-ib">
                 <div class="teaser-img-wrap">
                     <img src="/img/teaser-ib.jpg" alt="Screenshot of ibmathrevision.com hero: 'The complete IB Maths learning engine' with student/staff/parent doors" loading="lazy" decoding="async">
@@ -483,6 +519,25 @@
                 </div>
             </a>
 
+            <div class="teaser-card teaser-skeleton teaser-skeleton-igcse" data-testid="teaser-igcse" aria-label="IGCSE Maths Revision — coming soon">
+                <div class="teaser-img-wrap teaser-img-empty" aria-hidden="true">
+                    <div class="teaser-empty-inner">
+                        <svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke="#047857" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="7" y="5" width="34" height="38" rx="4"></rect>
+                            <path d="M14 14h20"></path>
+                            <path d="M17 24h14M24 17v14"></path>
+                            <path d="M15 37h18"></path>
+                        </svg>
+                        <span class="teaser-empty-label">Preview appears here at launch</span>
+                    </div>
+                    <span class="teaser-badge soon">Coming soon</span>
+                </div>
+                <div class="teaser-caption">
+                    <strong>IGCSE Math Revision</strong>
+                    <span>Edexcel International GCSE (4MA1) Higher — topic-by-topic practice, Path to 9, formula guide and examiner-style mark schemes. Domain launching soon.</span>
+                </div>
+            </div>
+
             <div class="teaser-card teaser-skeleton" data-testid="teaser-cbse" aria-label="CBSE Maths Revision — coming soon">
                 <div class="teaser-img-wrap teaser-img-empty" aria-hidden="true">
                     <div class="teaser-empty-inner">
@@ -497,7 +552,7 @@
                 </div>
                 <div class="teaser-caption">
                     <strong>CBSE Math Revision</strong>
-                    <span>Class IX–XII CBSE mathematics. Chapter-by-chapter practice, Boards-day exam technique, method-mark AI grading. Domain launching soon.</span>
+                    <span>CBSE mathematics — Class X and XII first, then IX and XI. Chapter-by-chapter practice, Boards-day exam technique, method-mark AI grading. Domain launching soon.</span>
                 </div>
             </div>
         </div>
@@ -564,15 +619,20 @@
     .teaser-skeleton:hover { transform: none; box-shadow: none; border-color: #d5b986; }
     .teaser-img-empty { display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, #fdf7ee 0 12px, #fbf1de 12px 24px); }
     .teaser-empty-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; color: #b25a00; }
+    .teaser-skeleton-igcse { background: linear-gradient(180deg, #fff 0%, #eefaf5 100%); border-color: #9fd9c3; }
+    .teaser-skeleton-igcse:hover { border-color: #6cc4a4; }
+    .teaser-skeleton-igcse .teaser-img-empty { background: repeating-linear-gradient(135deg, #eefaf5 0 12px, #e0f4ec 12px 24px); }
+    .teaser-skeleton-igcse .teaser-empty-inner { color: #047857; }
     .teaser-empty-label { font-size: 0.86rem; font-weight: 700; letter-spacing: 0.3px; }
 
     .teaser-feature-tag { position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 999px; font-size: 0.66rem; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; background: rgba(11,26,51,0.85); color: #f4b93a; backdrop-filter: blur(4px); }
     .feature-h { margin: 56px 0 6px; font-size: clamp(1.3rem, 2.3vw, 1.7rem); letter-spacing: -0.3px; color: #0b1a33; }
+    .sites-grid { grid-template-columns: repeat(2, 1fr); }
     .feature-grid { margin-top: 22px; }
     .feature-grid .teaser-card { border-color: #e4ecf5; }
     .feature-grid .teaser-img-wrap { background: #0b1a33; }
-    @media (max-width: 980px) { .teasers-grid { grid-template-columns: repeat(2, 1fr); } .teaser-skeleton { grid-column: 1 / -1; max-width: 520px; margin: 0 auto; width: 100%; } }
-    @media (max-width: 640px)  { .teasers-grid { grid-template-columns: 1fr; } .teaser-skeleton { grid-column: auto; max-width: none; } section.teasers { padding: 44px 16px 32px; } }
+    @media (max-width: 980px) { .teasers-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px)  { .teasers-grid, .sites-grid { grid-template-columns: 1fr; } section.teasers { padding: 44px 16px 32px; } }
 </style>
 
 <section class="founder-wrap">
@@ -631,6 +691,26 @@
     </div>
 </div>
 
+<div class="modal-backdrop" id="modal-igcse" role="dialog" aria-modal="true" aria-labelledby="modal-igcse-title" data-testid="modal-igcse">
+    <div class="modal igcse">
+        <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="7" y="5" width="34" height="38" rx="4"></rect>
+                    <path d="M14 14h20"></path>
+                    <path d="M17 24h14M24 17v14"></path>
+                    <path d="M15 37h18"></path>
+                </svg>
+        </div>
+        <h3 id="modal-igcse-title">IGCSE Math Revision — coming soon</h3>
+        <p><strong>igcsemathrevision.com</strong> is in build — Edexcel International GCSE (4MA1) Higher, with topic-by-topic practice, Path to 9, a formula guide and examiner-style mark schemes. Leave your email and we'll ping you the moment it opens.</p>
+        <form class="notify-form" data-notify="igcse" novalidate>
+            <input type="email" placeholder="Your email" required data-testid="notify-igcse-email" aria-label="Email address">
+            <button type="submit" class="btn" data-testid="notify-igcse-submit">Notify me</button>
+        </form>
+        <button type="button" class="btn btn-secondary" data-close data-testid="close-igcse">Close</button>
+    </div>
+</div>
+
 <div class="modal-backdrop" id="modal-cbse" role="dialog" aria-modal="true" aria-labelledby="modal-cbse-title" data-testid="modal-cbse">
     <div class="modal cbse">
         <div class="icon" aria-hidden="true">
@@ -640,7 +720,7 @@
             </svg>
         </div>
         <h3 id="modal-cbse-title">CBSE Math Revision — coming soon</h3>
-        <p>The CBSE site is next on the roadmap — Class IX to XII, board-style questions, chapter walkthroughs and Boards-day technique. Leave your email and we'll ping you the moment it opens.</p>
+        <p>The CBSE site is next on the roadmap — Class X and XII first, then IX and XI, with board-style questions, chapter walkthroughs and Boards-day technique. Leave your email and we'll ping you the moment it opens.</p>
         <form class="notify-form" data-notify="cbse" novalidate>
             <input type="email" placeholder="Your email" required data-testid="notify-cbse-email" aria-label="Email address">
             <button type="submit" class="btn" data-testid="notify-cbse-submit">Notify me</button>
@@ -694,19 +774,14 @@
                 input.focus();
                 return;
             }
-            const subject = encodeURIComponent(`Notify me — ${kind === 'alevel' ? 'A Level' : 'CBSE'} Math Revision launch`);
-            const body = encodeURIComponent(`Please add me to the launch list for ${kind === 'alevel' ? 'alevelmathrevision.com' : 'CBSE Math Revision'}.\n\nEmail: ${email}`);
+            const NAMES = { alevel: ['A Level', 'alevelmathrevision.com'], igcse: ['IGCSE', 'igcsemathrevision.com'], cbse: ['CBSE', 'CBSE Math Revision'] };
+            const [label, site] = NAMES[kind] || NAMES.cbse;
+            const subject = encodeURIComponent(`Notify me — ${label} Math Revision launch`);
+            const body = encodeURIComponent(`Please add me to the launch list for ${site}.\n\nEmail: ${email}`);
             window.location.href = `mailto:pbromfield@ibmathrevision.com?subject=${subject}&body=${body}`;
             const btn = form.querySelector('button');
             if (btn) { btn.textContent = 'Opening email…'; btn.disabled = true; }
         });
-    });
-})();
-</script>
-
-</body>
-</html>
-     });
     });
 })();
 </script>
