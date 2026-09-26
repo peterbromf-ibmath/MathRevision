@@ -15,7 +15,7 @@ points at every site's key pages). SEO files: `robots.txt`, `sitemap.xml`,
 `404.html`, `img/og-image.jpg` (1200×630), Organization + WebSite JSON-LD in
 `index.html` (`sameAs` lists every live domain — add CBSE when it launches).
 
-Underneath the doors is a founder block for **Pete Bromfield** (Director of Studies & Enrichment, IB examiner) with a callout describing CBSE experience gained on a CIS inspection team at a CBSE / A Level school.
+Underneath the doors is a founder block for **Pete Bromfield** (Director of Studies & Enrichment, practising maths examiner) with a callout describing CBSE experience gained on a CIS accreditation evaluation team at a CBSE school.
 
 ---
 
