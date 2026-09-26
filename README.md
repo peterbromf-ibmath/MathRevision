@@ -5,8 +5,15 @@ A tiny, single-page landing site that acts as a **3-door hub** to three curricul
 | Door | Domain | Status |
 | --- | --- | --- |
 | **IB Math Revision** | [ibmathrevision.com](https://ibmathrevision.com) | Live — links out |
-| **A Level Math Revision** | `alevelmathrevision.com` | Coming soon (popup) |
-| **CBSE Math Revision** | *domain TBC* | Coming soon (popup) |
+| **A Level Math Revision** | [alevelmathrevision.com](https://alevelmathrevision.com) | Live — links out |
+| **IGCSE Math Revision** | `igcsemathrevision.com` | Coming soon (popup) |
+| **CBSE Math Revision** | `cbsemathrevision.com` | Coming soon (popup) |
+
+Below the doors, **Revision by qualification** links straight into each site's
+course hubs and topic pages (the hub's job for search: one crawlable page that
+points at every site's key pages). SEO files: `robots.txt`, `sitemap.xml`,
+`404.html`, `img/og-image.jpg` (1200×630), Organization + WebSite JSON-LD in
+`index.html` (`sameAs` lists every live domain — add CBSE when it launches).
 
 Underneath the doors is a founder block for **Pete Bromfield** (Director of Studies & Enrichment, IB examiner) with a callout describing CBSE experience gained on a CIS inspection team at a CBSE / A Level school.
 
