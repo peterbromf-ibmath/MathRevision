@@ -1,9 +1,9 @@
 name: Refresh live-site teasers
 
-# Every Sunday 07:00 UTC — re-captures ibmathrevision.com and
-# alevelmathrevision.com hero screenshots and commits them back so the
-# mathrevision.co.uk "A peek at the real thing" cards always show the
-# current state of both live sites.
+# Every Sunday 07:00 UTC — re-captures the ibmathrevision.com,
+# alevelmathrevision.com, igcsemathrevision.com and cbsemathrevision.com hero
+# screenshots and commits them back so the mathrevision.co.uk "A peek at the
+# real thing" cards always show the current state of the live sites.
 
 on:
   schedule:
@@ -42,6 +42,8 @@ jobs:
           const shots = [
             { url: 'https://ibmathrevision.com/',              out: 'img/teaser-ib.jpg' },
             { url: 'https://alevelmathrevision.com/',          out: 'img/teaser-alevel.jpg' },
+            { url: 'https://igcsemathrevision.com/',           out: 'img/teaser-igcse.jpg' },
+            { url: 'https://cbsemathrevision.com/',            out: 'img/teaser-cbse.jpg' },
             { url: 'https://ibmathrevision.com/practice.html', out: 'img/feature-practice.jpg' },
             { url: 'https://ibmathrevision.com/path-to-7.html',out: 'img/feature-path-to-7.jpg' },
             { url: 'https://ibmathrevision.com/jeopardy.html', out: 'img/feature-live-game.jpg' },
@@ -74,6 +76,6 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add img/teaser-ib.jpg img/teaser-alevel.jpg img/feature-practice.jpg img/feature-path-to-7.jpg img/feature-live-game.jpg
+          git add img/teaser-ib.jpg img/teaser-alevel.jpg img/teaser-igcse.jpg img/teaser-cbse.jpg img/feature-practice.jpg img/feature-path-to-7.jpg img/feature-live-game.jpg
           git diff --quiet --cached || git commit -m "chore: refresh live-site + feature teaser screenshots"
           git push
