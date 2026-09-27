@@ -6,8 +6,8 @@ A tiny, single-page landing site that acts as a **3-door hub** to three curricul
 | --- | --- | --- |
 | **IB Math Revision** | [ibmathrevision.com](https://ibmathrevision.com) | Live — links out |
 | **A Level Math Revision** | [alevelmathrevision.com](https://alevelmathrevision.com) | Live — links out |
-| **IGCSE Math Revision** | `igcsemathrevision.com` | Coming soon (popup) |
-| **CBSE Math Revision** | `cbsemathrevision.com` | Coming soon (popup) |
+| **IGCSE Math Revision** | [igcsemathrevision.com](https://igcsemathrevision.com) | Live — links out |
+| **CBSE Math Revision** | [cbsemathrevision.com](https://cbsemathrevision.com) | Live — links out |
 
 Below the doors, **Revision by qualification** links straight into each site's
 course hubs and topic pages (the hub's job for search: one crawlable page that
