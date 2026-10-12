@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GCSE Maths Revision: Coming Soon | Math Revision</title>
+<meta name="description" content="GCSE Maths revision from Math Revision is on its way: instant-feedback practice by topic for AQA, Edexcel and OCR, Foundation and Higher. Until then, start with our IGCSE and A Level sites.">
+<!-- Holding page: kept out of search until the GCSE site launches (and out of sitemap.xml). -->
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://mathrevision.co.uk/gcse">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:title" content="GCSE Maths revision from Math Revision is on its way">
+<meta property="og:description" content="Instant-feedback GCSE Maths practice by topic, for AQA, Edexcel and OCR, Foundation and Higher. Being built now by Pete Bromfield.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mathrevision.co.uk/gcse">
+<meta property="og:site_name" content="Math Revision">
+<meta property="og:image" content="https://mathrevision.co.uk/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Math Revision: IB, A Level, IGCSE and CBSE maths revision">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --color-primary: #062559;
+    --color-primary-hover: #041a40;
+    --color-secondary: #0d3d8f;
+    --color-accent: #5ec8ff;
+    --color-bg: #f4f7fc;
+    --color-surface: #ffffff;
+    --color-surface-alt: #eef2f9;
+    --color-text: #0f172a;
+    --color-text-muted: #475569;
+    --color-border: #cbd5e1;
+    --color-border-soft: #d6dfec;
+    --color-success: #10b981;
+    --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-sans);
+    background: linear-gradient(180deg, var(--color-surface-alt) 0%, var(--color-bg) 55%, var(--color-surface) 100%);
+    color: var(--color-text); line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh;
+  }
+  a { color: var(--color-secondary); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 22px 0 8px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 800; color: var(--color-primary); text-decoration: none; font-size: 1.05rem; }
+  .brand img { width: 34px; height: 34px; }
+  .back { font-weight: 700; font-size: 0.9rem; text-decoration: none; padding: 10px 0; }
+  .back:hover { text-decoration: underline; }
+
+  .hero { text-align: center; padding: 44px 0 12px; }
+  .hero .shield { width: 96px; height: 96px; display: block; margin: 0 auto 18px; }
+  .pill { display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; background: rgba(94,200,255,0.18); color: var(--color-primary); border: 1px solid rgba(94,200,255,0.55); margin-bottom: 14px; }
+  h1 { font-size: clamp(1.8rem, 4.4vw, 2.7rem); line-height: 1.15; letter-spacing: -0.6px; color: var(--color-primary); margin: 0 0 14px; }
+  .lede { color: var(--color-text-muted); font-size: clamp(1rem, 1.4vw, 1.12rem); max-width: 640px; margin: 0 auto; }
+
+  h2 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); color: var(--color-primary); letter-spacing: -0.3px; margin: 0 0 6px; }
+  .section { padding: 36px 0 8px; }
+  .section > p.sub { color: var(--color-text-muted); margin: 0 0 18px; }
+
+  .offer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none; }
+  .offer li { background: var(--color-surface); border: 1px solid var(--color-border-soft); border-radius: 14px; padding: 18px 18px 16px; }
+  .offer strong { display: block; color: var(--color-primary); font-size: 1rem; margin-bottom: 4px; }
+  .offer span { color: var(--color-text-muted); font-size: 0.92rem; }
+  .offer .num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 8px; background: var(--color-surface-alt); color: var(--color-secondary); font-weight: 800; font-size: 0.85rem; margin-bottom: 10px; }
+
+  .today { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .door { display: flex; flex-direction: column; gap: 6px; background: var(--color-surface); border: 1px solid var(--color-border-soft); border-radius: 16px; padding: 20px 20px 18px; position: relative; overflow: hidden; }
+  .door::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--color-secondary); }
+  .door .head { display: flex; align-items: center; gap: 12px; }
+  .door .head img { width: 48px; height: 48px; border-radius: 10px; border: 1px solid var(--color-border-soft); }
+  .door h3 { margin: 0; font-size: 1.1rem; color: var(--color-primary); line-height: 1.25; }
+  .door .domain { margin: 0; font-size: 0.8rem; color: var(--color-text-muted); font-weight: 600; }
+  .door p { margin: 6px 0 4px; color: var(--color-text-muted); font-size: 0.94rem; }
+  .door ul { margin: 2px 0 12px; padding: 0; list-style: none; }
+  .door li { border-top: 1px solid var(--color-border-soft); }
+  .door li a { display: block; padding: 10px 0; text-decoration: none; font-weight: 600; font-size: 0.94rem; }
+  .door li a:hover { text-decoration: underline; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 20px; border-radius: 10px; background: var(--color-primary); color: #fff; font-weight: 700; text-decoration: none; font-size: 0.95rem; margin-top: auto; align-self: flex-start; transition: background 0.15s ease; }
+  .btn:hover, .btn:focus-visible { background: var(--color-primary-hover); }
+  .btn.ghost { background: transparent; color: var(--color-primary); border: 1px solid var(--color-border); }
+  .btn.ghost:hover, .btn.ghost:focus-visible { background: var(--color-surface-alt); }
+
+  .notify { margin: 36px 0 0; display: flex; align-items: center; gap: 18px; background: var(--color-surface); border: 1px solid var(--color-border-soft); border-radius: 16px; padding: 20px; }
+  .notify img { width: 64px; height: 64px; border-radius: 50%; flex: none; }
+  .notify .txt { flex: 1; min-width: 0; }
+  .notify h2 { font-size: 1.15rem; margin: 0 0 2px; }
+  .notify p { margin: 0; color: var(--color-text-muted); font-size: 0.92rem; }
+  .notify .btn { margin: 0; flex: none; }
+
+  footer { text-align: center; color: var(--color-text-muted); font-size: 0.85rem; padding: 40px 0 36px; }
+  footer a { font-weight: 600; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .disclaimer { margin: 10px auto 0; font-size: 0.72rem; max-width: 640px; line-height: 1.45; }
+
+  @media (max-width: 760px) {
+    .offer { grid-template-columns: 1fr; }
+    .today { grid-template-columns: 1fr; }
+    .notify { flex-wrap: wrap; }
+    .notify .btn { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a href="/" class="brand"><img src="/img/math-revision-shield-96.png" alt="Math Revision shield logo" width="34" height="34">Math Revision</a>
+    <a href="/" class="back">All our sites</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="gcse-h">
+      <img class="shield" src="/img/math-revision-shield-96.png" alt="" width="96" height="96">
+      <span class="pill">Coming soon</span>
+      <h1 id="gcse-h">GCSE Maths revision from Math Revision is on its way</h1>
+      <p class="lede">Pete Bromfield is building a GCSE Maths site to the same standard as our IB, A Level, IGCSE and CBSE sites. It opens when it is ready, not before, so there is no launch date yet.</p>
+    </section>
+
+    <section class="section" aria-labelledby="offer-h">
+      <h2 id="offer-h">What it will offer</h2>
+      <p class="sub">The plan for the GCSE site. Like our other sites, signing up will be free, with no card.</p>
+      <ul class="offer">
+        <li><span class="num" aria-hidden="true">1</span><strong>Practice by topic</strong><span>Original exam-style questions, topic by topic, with instant feedback on every answer.</span></li>
+        <li><span class="num" aria-hidden="true">2</span><strong>Foundation and Higher</strong><span>Both tiers, with questions pitched at the tier you are entered for.</span></li>
+        <li><span class="num" aria-hidden="true">3</span><strong>AQA, Edexcel and OCR</strong><span>Mapped to the AQA, Pearson Edexcel and OCR GCSE Maths specifications.</span></li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="today-h">
+      <h2 id="today-h">What you can use today</h2>
+      <p class="sub">International GCSE and GCSE Maths share many topics, so our IGCSE site is a good place to practise now.</p>
+      <div class="today">
+        <div class="door">
+          <div class="head">
+            <img src="/img/logo-igcse.png" alt="" width="48" height="48">
+            <div><h3>IGCSE Math Revision</h3><p class="domain">igcsemathrevision.com</p></div>
+          </div>
+          <ul>
+            <li><a href="https://igcsemathrevision.com/igcse-frontend/igcse-vs-gcse-maths">IGCSE vs GCSE Maths: what is the same and what differs</a></li>
+            <li><a href="https://igcsemathrevision.com/igcse-frontend/pass-gcse-maths">How to pass GCSE Maths: grade 4 guide</a></li>
+            <li><a href="https://igcsemathrevision.com/igcse-frontend/4ma1/questions">Free questions by topic, with worked solutions</a></li>
+          </ul>
+          <a class="btn" href="https://igcsemathrevision.com/">Go to IGCSE Math Revision</a>
+        </div>
+        <div class="door">
+          <div class="head">
+            <img src="/img/logo-alevel.png" alt="" width="48" height="48">
+            <div><h3>A Level Math Revision</h3><p class="domain">alevelmathrevision.com</p></div>
+          </div>
+          <p>Finished GCSE and starting A Level Maths in Year 12? Close the gap first.</p>
+          <ul>
+            <li><a href="https://alevelmathrevision.com/alevel-frontend/bridging">Bridging course: from GCSE Higher to A Level</a></li>
+            <li><a href="https://alevelmathrevision.com/alevel-frontend/is-a-level-maths-hard">Is A Level Maths hard? The step up from GCSE</a></li>
+          </ul>
+          <a class="btn ghost" href="https://alevelmathrevision.com/">Go to A Level Math Revision</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="notify" aria-labelledby="notify-h">
+      <img src="/img/pete-bromfield-square.jpg" alt="Pete Bromfield" width="64" height="64" loading="lazy" decoding="async">
+      <div class="txt">
+        <h2 id="notify-h">Want to know when it opens?</h2>
+        <p>Email Pete with &ldquo;GCSE&rdquo; in the subject and he will reply when the site opens. Your address is used for nothing else.</p>
+      </div>
+      <a class="btn" href="mailto:pbromfield@ibmathrevision.com?subject=GCSE%3A%20tell%20me%20when%20it%20opens">Email Pete</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Math Revision · <a href="/">mathrevision.co.uk</a> · <a href="mailto:pbromfield@ibmathrevision.com">pbromfield@ibmathrevision.com</a>
+    <p class="disclaimer">Math Revision is run by Pete Bromfield, a former Head of Maths with IB examining experience. Independent: not affiliated with, endorsed by or authorised by AQA, Pearson Edexcel, OCR, Cambridge, the International Baccalaureate Organization or CBSE.</p>
+  </footer>
+</div>
+</body>
+</html>
