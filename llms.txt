@@ -1,0 +1,54 @@
+# Math Revision
+
+> Math Revision (mathrevision.co.uk) is a family of four independent maths revision sites, run by Pete Bromfield, a former Head of Maths with IB examining experience: IB Math Revision (IB Diploma Programme Mathematics, AA and AI, SL and HL), A Level Math Revision (UK A Level and Pearson Edexcel International A Level), IGCSE Math Revision (Pearson Edexcel International GCSE 4MA1 and Cambridge IGCSE 0580) and CBSE Math Revision (CBSE Class 9 to 12). Each site has original exam-style questions with full mark schemes, plus free practice, formula sheets and topic pages that need no sign-up. Signing up is free, with no card, and one account works on all four sites; paid plans add the full question bank and progress tracking. Independent: not affiliated with, endorsed by or connected to the International Baccalaureate (IB), Pearson Edexcel, Cambridge, AQA, OCR, CBSE or NCERT.
+
+All questions, worked solutions and mark schemes on the four sites are original. The sites do not host exam board past papers or mark schemes; they link to the official copies only. A GCSE Maths site (AQA, Edexcel and OCR, Foundation and Higher) is being built and has no launch date yet; https://mathrevision.co.uk/gcse is its holding page.
+
+Who runs it: Pete Bromfield (https://ibmathrevision.com/author-pete-bromfield). Contact: pbromfield@ibmathrevision.com.
+
+## The four sites
+
+- [IB Math Revision](https://ibmathrevision.com/): IB Diploma Maths, Analysis and Approaches (AA) and Applications and Interpretation (AI), SL and HL
+- [A Level Math Revision](https://alevelmathrevision.com/): UK A Level Maths (AQA, Edexcel and OCR content) and Edexcel International A Level (IAL)
+- [IGCSE Math Revision](https://igcsemathrevision.com/): Edexcel International GCSE Maths A (4MA1) and Cambridge IGCSE Maths (0580)
+- [CBSE Math Revision](https://cbsemathrevision.com/): CBSE Class 9, 10, 11 and 12 Maths, chapter by chapter, no calculator
+
+## IB Diploma Maths (free)
+
+- [Free IB Maths practice exams (PDF)](https://ibmathrevision.com/free-practice-exams): Printable practice exams with full mark schemes, no sign-up
+- [AA SL questions by topic](https://ibmathrevision.com/slaa/questions): Exam-style questions with worked solutions
+- [AI SL questions by topic](https://ibmathrevision.com/slai/questions): Exam-style questions with worked solutions
+- [AA HL questions by topic](https://ibmathrevision.com/hlaa/questions): Exam-style questions with worked solutions
+- [AI HL questions by topic](https://ibmathrevision.com/hlai/questions): Exam-style questions with worked solutions
+- [IB Maths formula booklets](https://ibmathrevision.com/formula-booklets): Formula sheets for each course
+- [5-minute check](https://ibmathrevision.com/start): A short diagnostic that shows which topics to revise first
+
+## A Level Maths (free)
+
+- [Free A Level Maths practice exams (PDF)](https://alevelmathrevision.com/alevel-frontend/free-practice-exams): Printable practice exams with full mark schemes, no sign-up
+- [UK A Level Maths](https://alevelmathrevision.com/alevel-frontend/uk): Pure, Statistics and Mechanics topics for Year 12 and Year 13
+- [Edexcel International A Level Maths](https://alevelmathrevision.com/alevel-frontend/ial): Unit-by-unit revision for P1 to P4, M1 and S1
+- [5-minute diagnostic](https://alevelmathrevision.com/alevel-frontend/diagnose-alevel): Shows which topics to revise first
+- [A Level Maths formula sheets](https://alevelmathrevision.com/alevel-frontend/formula-booklets): Formula sheets for UK A Level and IAL
+- [Bridging course](https://alevelmathrevision.com/alevel-frontend/bridging): From GCSE or IGCSE Higher to A Level Maths
+
+## IGCSE Maths (free)
+
+- [Free IGCSE Maths practice exams (PDF)](https://igcsemathrevision.com/free-practice-exams): Printable practice exams with full mark schemes, no sign-up
+- [Edexcel 4MA1 questions by topic](https://igcsemathrevision.com/igcse-frontend/4ma1/questions): Exam-style questions with worked solutions
+- [Cambridge 0580 questions by topic](https://igcsemathrevision.com/igcse-frontend/0580/questions): Exam-style questions with worked solutions
+- [IGCSE Maths formula sheets](https://igcsemathrevision.com/formula-booklets): Formula sheets for 4MA1 and 0580
+- [IGCSE vs GCSE Maths](https://igcsemathrevision.com/igcse-frontend/igcse-vs-gcse-maths): How International GCSE and GCSE Maths differ
+- [How to pass GCSE Maths](https://igcsemathrevision.com/igcse-frontend/pass-gcse-maths): Grade 4 basics, practice and a revision plan
+
+## CBSE Maths (free)
+
+- [CBSE Class 10 Maths](https://cbsemathrevision.com/class-10): Chapter-by-chapter questions with step-marked solutions
+- [CBSE Class 12 Maths](https://cbsemathrevision.com/class-12): Chapter-by-chapter questions with step-marked solutions
+- [CBSE Maths formula sheets](https://cbsemathrevision.com/formula-booklets): Formula sheets for Class 9 to 12
+
+## About
+
+- [Pete Bromfield](https://ibmathrevision.com/author-pete-bromfield): Who writes and checks the questions
+- [About Math Revision](https://ibmathrevision.com/about): The four sites, what is free, what paid plans add, and independence
+- [GCSE Maths (coming soon)](https://mathrevision.co.uk/gcse): Holding page for the GCSE site, with what to use today
